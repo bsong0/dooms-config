@@ -22,7 +22,7 @@
 ;; accept. For example:
 ;;
 (setq doom-font (font-spec :family "ComicCode Nerd Font" :size 11 :weight 'semi-light))
-(setq doom-variable-pitch-font (font-spec :family "ComicCode Nerd Font" :size 11))
+(setq doom-themes-treemacs-enable-variable-pitch nil)
 
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
@@ -77,3 +77,11 @@
 ;; they are implemented.
 (setq company-idle-delay 0.1)
 (setq confirm-kill-emacs nil)
+(setq select-enable-clipboard nil)
+
+;; treemacs configs
+(treemacs-resize-icons 14)
+(define-key evil-normal-state-map (kbd "<C-n>") #'treemacs)
+
+;; ui
+(setq doom-theme 'doom-nord)
